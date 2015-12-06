@@ -15,6 +15,20 @@ NaN2 <- function(x, replacement) {
     x
 }
 
+##--------------------------------------------------------------------------------
+## Unlike NA2, Inf2, and NaN2, NULL2 is _not_ vectorized.
+## is.na(x), is.infinite(x), and is.nan(x) are all vectorized, but is.null(x) is not.
+## NULL2 simply employs is.null(x), which always returns a scalar logical.
+## If testing for NULL entries in a list, use one of the *ply functions.
+##--------------------------------------------------------------------------------
+NULL2 <- function(x, replacement) {
+    if(is.null(x)) {
+        replacement
+    } else {
+        x
+    }
+}
+
 chunk <- function(x, n_chunks = NULL, max_chunk_size = NULL, method = c("seq", "mod", "rand")) {
     if((is.null(n_chunks) && is.null(max_chunk_size)) ||
        (!is.null(n_chunks) && !is.null(max_chunk_size))) {
