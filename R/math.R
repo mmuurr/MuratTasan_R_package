@@ -1,1 +1,1 @@
-logit <- function(p) qlogis(o)
+logit <- function(p) qlogis(p)

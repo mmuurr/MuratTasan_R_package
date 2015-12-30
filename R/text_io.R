@@ -8,3 +8,4 @@ sstr <- function(object, ...) {
             sprintf("str(%s):", deparse(substitute(object))),
             paste0(capture.output(str(object, ...)), collapse = "\n"))
 }
+
