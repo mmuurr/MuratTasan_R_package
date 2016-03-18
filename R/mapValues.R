@@ -6,7 +6,7 @@
 ## If `keep_x_when_missing_from` == FALSE, then:
 ##   (1) If `to` is atomix, then `missing_from_val` must be a scalar;
 ##   (2) If `to` is a list (or object), `missing_from_val` can be anything that would otherwise fit into each position of `to`.
-mapValues <- function(x, from, to, keep_x_when_missing_from = FALSE, missing_from_val = NA) {
+mapValues <- function(x, from, to, missing_from_val = NA, keep_x_when_missing_from = FALSE) {
     if(length(from) != length(to)) stop("`from` and `to` vectors are not the same length.")
     if(!is.atomic(x)) stop("`x` must be an atomic vector.")
     if(!keep_x_when_missing_from && is.atomic(to) && length(missing_from_val) != 1) stop("`missing_from_val` must be a scalar when `to` is an atomic vector")
