@@ -1,6 +1,6 @@
 Package: MuratTasan
 Title: Murat Tasan's Swiss-Army Knife
-Version: 1.4.2
+Version: 1.4.3
 Authors@R: person("Murat", "Tasan", email = "murat@tasanlab.org", role = c("aut", "cre"))
 Description: Utilites to make programming easier for (you and) me.
 Depends: R (>= 3.2.2)
